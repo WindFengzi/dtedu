@@ -1,0 +1,47 @@
+         // check if the data has come from the barcode scanner
+            if (source.equalsIgnoreCase("scanner")) {
+                // check if there is anything in the data
+                if (data != null && data.length() > 0) {
+                    // we have some data, so let's get it's symbology
+                    String sLabelType = i.getStringExtra(LABEL_TYPE_TAG);
+                    // check if the string is empty
+                    if (sLabelType != null && sLabelType.length() > 0) {
+                        // format of the label type string is LABEL-TYPE-SYMBOLOGY
+                        // so let's skip the LABEL-TYPE- portion to get just the symbology
+                        sLabelType = sLabelType.substring(11);
+                    }
+                    else {
+                        // the string was empty so let's set it to "Unknown"
+                        sLabelType = "Unknown";
+                    }
+                    //"Source: Scanner, " + "Symbology: " + sLabelType + ", Length: " + data_len.toString() + ", Data: ...\r\n";
+                }
+            }
+
+            // check if the data has come from the MSR
+            //if (source.equalsIgnoreCase("msr")) {
+               // "Source: MSR, Length: " + data_len.toString() + ", Data: ...\r\n";
+            //}
+
+            // let's get our edit box view
+//            EditText et = (EditText)findViewById(R.id.editbox);
+//            // and get it's text into an editable string
+//            Editable txt = et.getText();
+//            // now because we want format our output
+//            // we need to put the edit box text into a spannable string builder
+//            SpannableStringBuilder stringbuilder = new SpannableStringBuilder(txt);
+//            // add the output string we constructed earlier
+//            stringbuilder.append(out);
+//            // now let's highlight our output string in bold type
+//            stringbuilder.setSpan(new StyleSpan(Typeface.BOLD), txt.length(), stringbuilder.length(), SpannableString.SPAN_EXCLUSIVE_EXCLUSIVE);
+//            // then add the barcode or msr data, plus a new line, and add it to the string builder
+//            stringbuilder.append(data + "\r\n");
+//            // now let's update the text in the edit box
+//            et.setText(stringbuilder);
+//            // we want the text cursor to be at the end of the edit box
+//            // so let's get the edit box text again
+//            txt = et.getText();
+//            // and set the cursor position at the end of the text
+//            et.setSelection(txt.length());
+            // and we are done!
+        }

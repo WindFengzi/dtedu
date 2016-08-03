@@ -1,0 +1,40 @@
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/id_pic_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.winso.break_law.activity.ViewPicActivity" >
+
+    <ImageView
+        android:id="@+id/t_view_pic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="matrix"
+        android:src="@drawable/abc_ab_bottom_transparent_dark_holo" />
+
+   <Button
+       android:id="@+id/btn_back"
+       style="@style/BreakLaw.MainTab.Button"
+       android:layout_width="wrap_content"
+       android:layout_height="60dp"
+       android:layout_alignParentLeft="true"
+       android:layout_alignParentTop="true"
+       android:layout_marginLeft="17dp"
+       android:drawableLeft="@drawable/btn_back_header"
+       android:maxHeight="60dp" />
+
+   <Button
+       android:id="@+id/bt_clear_draw_c"
+       style="@style/BreakLaw.MainTab.Button"
+       android:layout_width="wrap_content"
+       android:layout_height="60dp"
+       android:layout_alignParentRight="true"
+       android:layout_alignParentTop="true"
+       android:drawableLeft="@drawable/bt_clear" />
+
+</RelativeLayout>

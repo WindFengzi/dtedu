@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="s_com_email">tech@eastsun.net</string>
+    <string name="s_com_web">http://www.eastsun.net</string>
+    <string name="s_com_fax">0571-88368008</string>
+    <string name="s_com_phone">0571-88388111</string>
+    <string name="app_name">东太教学互动系统</string>
+    <string name="action_settings">设置</string>
+    <string name="login_dialog_account">账号:</string>
+    <string name="login_dialog_account_hint">输入账号</string>
+    <string name="login_dialog_password">密码:</string>
+    <string name="login_dialog_password_hint">输入密码</string>
+    <string name="login_dialog_reg">注册帐号</string>
+    <string name="login_dialog_login">登  录</string>
+    <string name="login_dialog_rememberPW">记住密码</string>
+    <string name="login_dialog_autoLogin">自动登录</string>
+    <string name="login_dialog_setting">设置</string>
+    <string name="s_header_title">标题</string>
+    <string name="s_about">关于</string>
+    <string name="s_save">保存</string>
+    <string name="cent_ip">IP:</string>
+    <string name="s_enable_2g_3g">2G/3G模式上传下载</string>
+    <string name="s_enable_message">消息提示</string>
+    <string name="s_enable_message_v">消息振动提示</string>
+    <string name="s_enable_message_night">夜间防骚乱模式</string>
+    <string name="s_project_name">项目:</string>
+    <string name="func_catch_photo">违拍</string>
+    <string name="func_read">批阅</string>
+    <string name="func_reform">整拍</string>
+    <string name="func_query">查询</string>
+    <string name="func_setting">设置</string>
+    <string name="func_read_breaklaw">批违</string>
+    <string name="func_read_reform">批整</string>
+    <string name="s_click_select_project">点击选择</string>
+    <string name="app_company">东太科技有限公司  版本权所有(C) 2014-2016</string>
+    <string name="s_point">点名</string>
+    <string name="s_answer">课堂问答</string>
+    <string name="s_leave">请假</string>
+    <string name="s_review_eachother">学生互评</string>
+    <string name="s_sys_setting">系统设置</string>
+    <string name="title_activity_point">点名</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_leave">请假</string>
+    <string name="title_activity_answer">answer</string>
+    <string name="title_activity_select_teacher">选择老师</string>
+    <string name="title_activity_select_datetime">selectdatetime</string>
+	<string name="submit">提交</string>
+    <string name="add">添加</string>
+    <string name="save">保存</string>
+    <string name="check">点名</string>
+    <string name="check_in">签到</string>
+    <string name="input_hint">请输入...</string>
+    <string name="input_hint_after">你已经签过到了！</string>
+    <string name="about">关于</string>
+    <string name="loginOut">退出</string>
+	
+</resources>

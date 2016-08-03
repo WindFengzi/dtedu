@@ -1,0 +1,95 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.winso.interactive.PointActivity" >
+
+    <include
+        android:id="@+id/include_toolbar"
+        layout="@layout/activity_main_header" />
+
+    <TextView
+        android:id="@+id/tx_point_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tableLayout1"
+        android:gravity="center"
+        android:paddingTop="8dp"
+        android:text=""
+        android:textColor="@color/blue_black"
+        android:textSize="@dimen/text_size_16" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/include_toolbar"
+        android:gravity="left"
+        android:paddingTop="18dp"
+        android:layout_marginLeft="18dp"
+        android:text="请输入正确的校验码:" />
+
+    
+    <EditText
+        android:id="@+id/ed_point_no"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/textView2"
+        android:background="@drawable/edit_border"
+        android:layout_margin="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:hint="@string/input_hint" />
+    
+    <TextView
+        android:id="@+id/tx_update_diag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/ed_point_no"
+        android:gravity="center"
+        android:paddingTop="12dp"
+        android:textSize="@dimen/text_size_12" />
+    
+    <TextView
+        android:id="@+id/tx_update_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tx_update_diag"
+        android:gravity="center"
+        android:paddingTop="12dp"
+        android:textSize="@dimen/text_size_12"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tx_update_time"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:paddingTop="20dp"
+        android:text="注:若点名不成功或系统故障,\n请点击&quot;提交按扭&quot;，手工提交点到!"
+        android:textSize="@dimen/text_size_12" />
+
+    <Button
+        android:id="@+id/bt_summit_point"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/TextView01"
+        android:layout_alignRight="@+id/TextView01"
+        android:layout_below="@id/TextView01"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/image_btn_check_press"
+        android:text="@string/check_in"
+        android:textColor="@color/white"
+        android:enabled="true" />
+
+</RelativeLayout>
