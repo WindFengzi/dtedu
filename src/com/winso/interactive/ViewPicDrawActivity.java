@@ -46,7 +46,7 @@ public class ViewPicDrawActivity extends BaseActivity {
 		tViewImage = (ImageView) findViewById(R.id.t_view_pic);
 
 		
-		fScreenWidth = this.getWindowManager().getDefaultDisplay().getWidth(); 
+		fScreenWidth = this.getWindowManager().getDefaultDisplay().getWidth();
 		fScreenHeight = this.getWindowManager().getDefaultDisplay().getHeight();
 		 
 		//tViewImage.setMinZoom(1);
@@ -63,24 +63,20 @@ public class ViewPicDrawActivity extends BaseActivity {
 		fBmpWidth = bmpDefaultPic.getWidth();
 		fBmpHeight = bmpDefaultPic.getHeight();
 		
-		if ( fScreenWidth > 0 )
-			scaleWidth=((float)fBmpWidth)/fScreenWidth;  
+		if ( fScreenWidth > 0 ){
+			scaleWidth=((float)fBmpWidth)/fScreenWidth;  			
+		}
 	    
-		if ( fScreenHeight > 0 )
-			scaleHeight=((float)fBmpHeight)/fScreenHeight;
-
-	    
+		if ( fScreenHeight > 0 ) {
+			scaleHeight=((float)fBmpHeight)/fScreenHeight;			
+		}
+		
 	    Matrix matrix=new Matrix();  
-        matrix.postScale(1/scaleWidth,1/scaleHeight);  
-          
+        matrix.postScale(1/scaleWidth,1/scaleHeight);
+
         Bitmap newBitmap=Bitmap.createBitmap(bmpDefaultPic, 0, 0, (int)fBmpWidth,(int)fBmpHeight, matrix, true);  
         tViewImage.setImageBitmap(newBitmap);  
         
-        
-        
-	   //tViewImage.setImageBitmap(bmpDefaultPic);
-
-		
 		// 设置返回按扭
 		Button mBtBack = (Button) findViewById(R.id.btn_back);
 		mBtBack.setOnClickListener(new OnClickListener() {
@@ -96,19 +92,8 @@ public class ViewPicDrawActivity extends BaseActivity {
 			}
 		});
 
-		//float fx = getResources().getDisplayMetrics().density;
-	
-		
-		
-		//fImageWidth = tViewImage.getDrawable().getIntrinsicWidth() * fx;
-		//fImageHeight = tViewImage.getDrawable().getIntrinsicHeight() * fx;
-
-		
-		//RectF rc = tViewImage.getZoomedRect();
-
 		initDraw();
 
-		//
 		Button btClear = (Button) findViewById(R.id.bt_clear_draw_c);
 		btClear.setOnClickListener(new OnClickListener() {
 			@Override
@@ -162,9 +147,4 @@ public class ViewPicDrawActivity extends BaseActivity {
 		ly.invalidate();
 	}
 
-//	private void processDraw() {
-//		mDrawView.addPoint(200, 300);
-//		mDrawView.invalidate();
-//
-//	}
 }

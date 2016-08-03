@@ -52,12 +52,13 @@ public class AnswerActivity extends BaseViewSaveActivity {
 	boolean bYesNoRight;
 
 	String sAskID = "0";
-	TextView txTitle;
+	TextView txTitle;  // 标题栏
 
-	EditText edAnswerText, edQuestion;
+	EditText edAnswerText; // 答案框
+	EditText edQuestion;   // 问题框
 
 	String sPicURL = "";
-	ImageView imageView = null;
+	ImageView imageView = null; // 图片答案框
 
 	Button mBtRob = null;
 	String sSaveText = "";
@@ -88,8 +89,9 @@ public class AnswerActivity extends BaseViewSaveActivity {
 				if (!sAskType.equals("图片比对")) {
 					return;
 				}
-				if (msDownloadFilePath.length() <= 0)
-					return;
+				if (msDownloadFilePath.length() <= 0){
+					return;					
+				}
 
 				Intent intent = new Intent(AnswerActivity.this,
 						ViewPicDrawActivity.class);
@@ -145,7 +147,7 @@ public class AnswerActivity extends BaseViewSaveActivity {
 					for (i = 0; i < 7; i++) {
 						iSizeAnswer[i] = 0;
 					}
-					//
+
 					for (i = 0; i < mAnswerAdapter.isSelected.size(); i++) {
 						if (mAnswerAdapter.isSelected.get(i)) {
 							bFind = true;
@@ -170,8 +172,7 @@ public class AnswerActivity extends BaseViewSaveActivity {
 			}
 		});
 
-		// ();
-
+		// 返回按钮
 		Button mBtBack = (Button) findViewById(R.id.btn_back);
 		mBtBack.setOnClickListener(new OnClickListener() {
 			@Override
@@ -179,7 +180,8 @@ public class AnswerActivity extends BaseViewSaveActivity {
 				finish();
 			}
 		});
-
+		
+		// 抢答按钮
 		mBtRob = (Button) findViewById(R.id.bt_rob_ask);
 		mBtRob.setOnClickListener(new OnClickListener() {
 			@Override
@@ -195,7 +197,8 @@ public class AnswerActivity extends BaseViewSaveActivity {
 				processRob();
 			}
 		});
-
+		
+		// 填写答案按钮
 		mBtAnswer = (Button) findViewById(R.id.bt_write_answer);
 		mBtAnswer.setOnClickListener(new OnClickListener() {
 			@Override
@@ -221,6 +224,7 @@ public class AnswerActivity extends BaseViewSaveActivity {
 			}
 		});
 
+		// 刷新按钮
 		Button mBtRefresh = (Button) findViewById(R.id.bt_refresh_question);
 		mBtRefresh.setOnClickListener(new OnClickListener() {
 			@Override
@@ -243,7 +247,6 @@ public class AnswerActivity extends BaseViewSaveActivity {
 		bRobOK = appContext.robAsk(sAskID);
 
 		if (bRobOK) {
-
 			UIHelper.showMsg(AnswerActivity.this, "", "抢答成功，请提交答案");
 		} else {
 			UIHelper.showMsg(AnswerActivity.this, "", "抢答失败");
