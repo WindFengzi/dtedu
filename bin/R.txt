@@ -691,7 +691,7 @@ int drawable zgzp 0x7f0200db
 int id ImageView01 0x7f0b009d
 int id ImageView02 0x7f0b00a7
 int id ImageView03 0x7f0b00a9
-int id ImageView04 0x7f0b00a0
+int id ImageView04 0x7f0b009f
 int id ImageView05 0x7f0b00ad
 int id ImageView06 0x7f0b00a5
 int id ImageView07 0x7f0b00a3
@@ -855,7 +855,7 @@ int id split_action_bar 0x7f0b0029
 int id st_auto_login 0x7f0b00a8
 int id st_enable_2g3g 0x7f0b00a6
 int id st_enable_message 0x7f0b00a4
-int id st_enable_message_night 0x7f0b009f
+int id st_enable_message_night 0x7f0b00a0
 int id st_enable_message_v 0x7f0b00a2
 int id submit_area 0x7f0b0045
 int id t_view_pic 0x7f0b00b1

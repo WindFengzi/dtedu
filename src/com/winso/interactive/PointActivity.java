@@ -3,7 +3,6 @@ package com.winso.interactive;
 import com.winso.comm_library.TimeZoneUtil;
 import com.winso.interactive.app.UIHelper;
 
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -17,7 +16,7 @@ public class PointActivity extends BaseViewSaveActivity {
 	private String sExeInfo = "";
 	private EditText eInputCheck;
 	private Button fBSubmit; // 签到按钮
-	private TextView tvDiag;
+//	private TextView tvDiag;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);

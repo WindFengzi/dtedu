@@ -102,13 +102,24 @@
              android:layout_alignLeft="@+id/ImageView04"
              android:layout_below="@+id/ImageView04"
              android:layout_weight="0.08"
+             android:layout_marginTop="15dp"
              android:text="@string/s_enable_message_night"
-             android:layout_margin="5dp"
              app:frameDrawable="@drawable/switch_frame"
              app:sliderDrawable="@drawable/selector_switch_slider"
              app:stateDrawable="@drawable/selector_switch_state"
              app:stateMaskDrawable="@drawable/switch_state_mask"
              app:withTextInterval="16dp" />
+         
+         <ImageView
+             android:id="@+id/ImageView08"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:layout_alignRight="@+id/st_enable_message_v"
+             android:layout_below="@id/st_enable_message_night"
+             android:scaleType="fitXY"
+             android:layout_marginTop="5dp"
+             android:layout_marginBottom="5dp"
+             android:src="@drawable/line" />
 
          <ImageView
              android:id="@+id/ImageView04"
@@ -127,13 +138,24 @@
              android:layout_centerHorizontal="true"
              android:layout_weight="0.02"
              android:text="@string/s_enable_message_v"
-             android:layout_margin="5dp"
+             android:layout_marginTop="15dp"
              app:frameDrawable="@drawable/switch_frame"
              app:sliderDrawable="@drawable/selector_switch_slider"
              app:stateDrawable="@drawable/selector_switch_state"
              app:stateMaskDrawable="@drawable/switch_state_mask"
              app:withTextInterval="16dp" />
 
+         <ImageView
+             android:id="@+id/ImageView07"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:layout_alignRight="@+id/st_enable_message_v"
+             android:layout_below="@id/st_enable_message_v"
+             android:scaleType="fitXY"
+             android:layout_marginTop="5dp"
+             android:layout_marginBottom="5dp"
+             android:src="@drawable/line" />
+         
          <com.winso.comm_library.widget.SwitchButton
              android:id="@+id/st_enable_message"
              android:layout_width="match_parent"
@@ -141,13 +163,24 @@
              android:layout_alignLeft="@+id/st_enable_message_v"
              android:layout_below="@+id/st_enable_message_v"
              android:text="@string/s_enable_message"
-             android:layout_margin="5dp"
+             android:layout_marginTop="15dp"
              app:frameDrawable="@drawable/switch_frame"
              app:sliderDrawable="@drawable/selector_switch_slider"
              app:stateDrawable="@drawable/selector_switch_state"
              app:stateMaskDrawable="@drawable/switch_state_mask"
              app:withTextInterval="16dp" />
 
+         <ImageView
+             android:id="@+id/ImageView06"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:layout_alignRight="@+id/st_enable_message_v"
+             android:layout_below="@id/st_enable_message"
+             android:scaleType="fitXY"
+             android:layout_marginTop="5dp"
+             android:layout_marginBottom="5dp"
+             android:src="@drawable/line" />
+         
          <com.winso.comm_library.widget.SwitchButton
              android:id="@+id/st_enable_2g3g"
              android:layout_width="fill_parent"
@@ -156,7 +189,7 @@
              android:layout_below="@+id/st_enable_message"
              android:layout_weight="0.02"
              android:text="@string/s_enable_2g_3g"
-             android:layout_margin="5dp"
+             android:layout_marginTop="15dp"
              app:frameDrawable="@drawable/switch_frame"
              app:sliderDrawable="@drawable/selector_switch_slider"
              app:stateDrawable="@drawable/selector_switch_state"
@@ -170,6 +203,7 @@
              android:layout_alignRight="@+id/st_enable_message_v"
              android:layout_below="@+id/st_enable_2g3g"
              android:scaleType="fitXY"
+             android:layout_marginTop="5dp"
              android:src="@drawable/line" />
 
          <com.winso.comm_library.widget.SwitchButton
@@ -178,9 +212,8 @@
              android:layout_height="wrap_content"
              android:layout_alignLeft="@+id/ImageView02"
              android:layout_below="@+id/ImageView02"
-             android:layout_marginTop="14dp"
+             android:layout_marginTop="15dp"
              android:layout_weight="0.02"
-             android:layout_margin="5dp"
              android:text="@string/login_dialog_autoLogin"
              app:frameDrawable="@drawable/switch_frame"
              app:sliderDrawable="@drawable/selector_switch_slider"
@@ -188,15 +221,73 @@
              app:stateMaskDrawable="@drawable/switch_state_mask"
              app:withTextInterval="8dp" />
 
+         <ImageView
+             android:id="@+id/ImageView03"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:layout_alignRight="@+id/st_enable_message_v"
+             android:layout_below="@+id/st_auto_login"
+             android:scaleType="fitXY"
+             android:layout_marginTop="5dp"
+             android:layout_marginBottom="5dp"
+             android:src="@drawable/line" />
          
+         <RelativeLayout 
+             android:id="@+id/layout_about"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_below="@id/ImageView03"
+             android:layout_marginTop="10dp"
+             android:layout_marginBottom="5dp"
+             >
+             
+             <TextView 
+                 android:id="@+id/about_tv"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:text="@string/about"
+                 android:textSize="20dp"/>
+             
+             <ImageButton 
+                 android:id="@+id/about_imb"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:background="@drawable/btn_back_logo"
+                 android:layout_alignParentRight="true"
+                 android:layout_marginRight="15dp"/>
+         </RelativeLayout>
 
+         <ImageView
+             android:id="@+id/ImageView05"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:layout_alignRight="@+id/st_enable_message_v"
+             android:layout_below="@id/layout_about"
+             android:scaleType="fitXY"
+             android:layout_marginTop="5dp"
+             android:layout_marginBottom="5dp"
+             android:src="@drawable/line" />
+         
+         <Button
+             android:id="@+id/exit_login"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:layout_below="@id/ImageView05"
+             android:background="@drawable/image_btn_check_press"
+             android:text="@string/loginOut"
+             android:layout_marginTop="15dp"
+             android:textSize="20dp"
+             android:textColor="@color/white"
+             android:visibility="invisible"/>
+         
     </RelativeLayout>
 
     <RadioGroup
         android:id="@+id/rg_tabs"
         style="@style/BreakLaw.MainTab"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true" >
+        android:layout_alignParentLeft="true" 
+        android:visibility="invisible">
 
         <RadioButton
             android:id="@+id/main_btn_sum_report"
@@ -227,7 +318,8 @@
             style="@style/BreakLaw.MainTab.Button"
             android:button="@null"
             android:drawableTop="@drawable/btn_about_pic_sel"
-            android:text="@string/s_about" />
+            android:text="@string/s_about" 
+            android:visibility="invisible"/>
 
     </RadioGroup>
 

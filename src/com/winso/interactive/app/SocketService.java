@@ -72,7 +72,8 @@ public class SocketService extends Service {
 			}
 			str += "\r\n";
 			
-		    Writer writer = new OutputStreamWriter(socket.getOutputStream());  
+		    Writer writer = new OutputStreamWriter(socket.getOutputStream());
+		    System.out.println("str--->" + str);
 		    writer.write(str);  
 		    
 		    writer.flush();//写完后要记得flush  
@@ -153,34 +154,34 @@ public class SocketService extends Service {
 		}
 	};
 	
-	public class CheckBackgroundThread extends Thread {
-		// private static final int PORT = 54321;
-
-		AppManager am;
-
-		private CheckBackgroundThread() {
-			am = AppManager.getAppManager();
-
-		}
-
-		@Override
-		public void run() {
-			while (true) {
-				try {
-
-					Thread.sleep(20 * 1000);
-					send2Center();
-
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-
-			}
-
-		}
-
-	}
+//	public class CheckBackgroundThread extends Thread {
+//		// private static final int PORT = 54321;
+//
+//		AppManager am;
+//
+//		private CheckBackgroundThread() {
+//			am = AppManager.getAppManager();
+//
+//		}
+//
+//		@Override
+//		public void run() {
+//			while (true) {
+//				try {
+//
+//					Thread.sleep(20 * 1000);
+//					send2Center();
+//
+//				} catch (InterruptedException e) {
+//					// TODO Auto-generated catch block
+//					e.printStackTrace();
+//				}
+//
+//			}
+//
+//		}
+//
+//	}
 
 	private boolean isBackgroundRunning() {
 		String processName = "match.android.activity";
@@ -228,7 +229,7 @@ public class SocketService extends Service {
 					// System.out.println("EXIT invoked, closing client");
 					// break;
 					// }
-
+					System.out.println("textLine--->" + textLine);
 					sendMsgtoActivty(textLine);
 					System.out.println(textLine);
 
@@ -248,52 +249,52 @@ public class SocketService extends Service {
 		}
 	};
 	
-	public class SocketServerThread extends Thread {
-		// private static final int PORT = 54321;
-
-		private SocketServerThread() {
-		}
-
-		@Override
-		public void run() {
-			try {
-				ServerSocket server = new ServerSocket(
-						AppContext.LOCAL_UDP_PORT);
-
-				while (true) {
-					System.out.println("begin client connected");
-					client = server.accept();
-					System.out.println("client connected");
-
-					BufferedReader reader = new BufferedReader(
-							new InputStreamReader(client.getInputStream()));
-					System.out.println("read from client:");
-
-					String textLine = reader.readLine();
-					// if (textLine.equalsIgnoreCase("EXIT")) {
-					// System.out.println("EXIT invoked, closing client");
-					// break;
-					// }
-
-					sendMsgtoActivty(textLine);
-					System.out.println(textLine);
-
-					PrintWriter writer = new PrintWriter(new BufferedWriter(
-							new OutputStreamWriter(client.getOutputStream())));
-
-					writer.println("success");
-					writer.flush();
-
-					writer.close();
-					reader.close();
-				}
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				System.err.println(e);
-			}
-		}
-
-	}
+//	public class SocketServerThread extends Thread {
+//		// private static final int PORT = 54321;
+//
+//		private SocketServerThread() {
+//		}
+//
+//		@Override
+//		public void run() {
+//			try {
+//				ServerSocket server = new ServerSocket(
+//						AppContext.LOCAL_UDP_PORT);
+//
+//				while (true) {
+//					System.out.println("begin client connected");
+//					client = server.accept();
+//					System.out.println("client connected");
+//
+//					BufferedReader reader = new BufferedReader(
+//							new InputStreamReader(client.getInputStream()));
+//					System.out.println("read from client:");
+//
+//					String textLine = reader.readLine();
+//					// if (textLine.equalsIgnoreCase("EXIT")) {
+//					// System.out.println("EXIT invoked, closing client");
+//					// break;
+//					// }
+//
+//					sendMsgtoActivty(textLine);
+//					System.out.println(textLine);
+//
+//					PrintWriter writer = new PrintWriter(new BufferedWriter(
+//							new OutputStreamWriter(client.getOutputStream())));
+//
+//					writer.println("success");
+//					writer.flush();
+//
+//					writer.close();
+//					reader.close();
+//				}
+//			} catch (IOException e) {
+//				// TODO Auto-generated catch block
+//				System.err.println(e);
+//			}
+//		}
+//
+//	}
 
 	/**
 	 * 把信息传递给activity
@@ -310,19 +311,19 @@ public class SocketService extends Service {
 
 		String sCmd = vsAll[0];
 
-		if (sCmd.equals(AppContext.CMD_POINT)) {
+		if (sCmd.equals(AppContext.CMD_POINT)) { // 点到
 
 			if (vsAll.length < 2)
 				return;
 
 			bNeedSend = true;
-		} else if (sCmd.equals(AppContext.CMD_UPDATE_COURSE)) {
+		} else if (sCmd.equals(AppContext.CMD_UPDATE_COURSE)) { // 更亲当前的班次
 
 			if (vsAll.length < 2)
 				return;
 
 			bNeedSend = true;
-		} else if (sCmd.equals(AppContext.CMD_UPDATE_ANSWER)) {
+		} else if (sCmd.equals(AppContext.CMD_UPDATE_ANSWER)) { // 更新题目
 			bNeedSend = true;
 		}
 		// mICouseID

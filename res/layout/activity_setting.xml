@@ -29,72 +29,91 @@
         android:layout_below="@+id/include_toolbar"
         android:paddingLeft="15dp"
         android:paddingRight="12dp" >
+	
+        <TableLayout 
+            android:id="@+id/tableLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            
+            <ImageView
+	            android:id="@+id/imageLine"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:scaleType="fitXY"
+	            android:src="@drawable/line" />
+            
+            <TableRow 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+		         <TextView
+		            android:id="@+id/tv_title"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_marginTop="20dp"
+		            android:textStyle="bold"
+		            android:textSize="18dp"
+		            android:layout_weight="2"
+		            android:text="@string/cent_ip" />
+		        
+		        <EditText
+		            android:id="@+id/ed_cent_ip"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_marginTop="20dp"
+		            android:background="@drawable/edit_border"
+		            android:hint="输入IP或者域名"
+		            android:layout_weight="8" >
+		
+		            <requestFocus />
+		        </EditText>
+            </TableRow>
+            
+            <ImageView
+	            android:id="@+id/ImageView01"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentLeft="true"
+	            android:layout_below="@+id/ed_cent_ip"
+	            android:layout_marginTop="13dp"
+	            android:scaleType="fitXY"
+	            android:src="@drawable/line" />
+            
+            <TableRow 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+		        <TextView
+		            android:id="@+id/tx_break_option"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_marginTop="20dp"
+		            android:textStyle="bold"
+		            android:textSize="18dp"
+		            android:layout_weight="2"
+		            android:text="@string/s_project_name"/>
+
+		        <EditText
+		             android:id="@+id/ed_project"
+		             android:layout_width="fill_parent"
+		             android:layout_height="wrap_content"
+		             android:background="@drawable/edit_border"
+		             android:autoLink="all"             
+		             android:layout_marginTop="20dp"
+		             android:layout_weight="8"
+		             android:hint="@string/s_click_select_project" />  
+            </TableRow>
+        </TableLayout>
 
         <ImageView
-            android:id="@+id/imageLine"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:scaleType="fitXY"
-            android:src="@drawable/line" />
-
-        <TextView
-            android:id="@+id/tv_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/ed_cent_ip"
-            android:layout_alignBottom="@id/ed_cent_ip"
-            android:layout_below="@id/imageLine"
-            android:layout_alignParentLeft="true"
-            android:layout_marginTop="20dp"
-            android:text="@string/cent_ip" />
-        
-        <EditText
-            android:id="@+id/ed_cent_ip"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_below="@id/imageLine"
-            android:layout_toRightOf="@id/tv_title"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/edit_border"
-            android:ems="10"
-            android:hint="输入IP或者域名" >
-
-            <requestFocus />
-        </EditText>
-
-        <ImageView
-            android:id="@+id/ImageView01"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_below="@+id/ed_cent_ip"
-            android:layout_marginTop="13dp"
-            android:scaleType="fitXY"
-            android:src="@drawable/line" />
-
-        <TextView
-            android:id="@+id/tx_break_option"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_below="@id/ImageView01"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="10dp"
-            android:text="@string/s_project_name" />
-
-        <EditText
-             android:id="@+id/ed_project"
-             android:layout_width="wrap_content"
+             android:id="@+id/ImageView04"
+             android:layout_width="fill_parent"
              android:layout_height="wrap_content"
-             android:layout_alignRight="@id/ImageView01"
-             android:layout_alignTop="@id/tx_break_option"
-             android:background="@drawable/edit_border"
-             android:autoLink="all"             
-             android:layout_marginBottom="10dp"
-             android:ems="10"
-             android:hint="@string/s_click_select_project" />
-
+             android:layout_alignRight="@id/tableLayout1"
+             android:layout_below="@id/tableLayout1"
+             android:scaleType="fitXY"
+             android:layout_marginTop="13dp"
+             android:src="@drawable/line" />
+        
          <com.winso.comm_library.widget.SwitchButton
              android:id="@+id/st_enable_message_night"
              android:layout_width="match_parent"
@@ -121,14 +140,7 @@
              android:layout_marginBottom="5dp"
              android:src="@drawable/line" />
 
-         <ImageView
-             android:id="@+id/ImageView04"
-             android:layout_width="fill_parent"
-             android:layout_height="wrap_content"
-             android:layout_alignRight="@id/ed_project"
-             android:layout_below="@id/ed_project"
-             android:scaleType="fitXY"
-             android:src="@drawable/line" />
+         
 
          <com.winso.comm_library.widget.SwitchButton
              android:id="@+id/st_enable_message_v"

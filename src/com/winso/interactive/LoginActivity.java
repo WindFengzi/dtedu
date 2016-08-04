@@ -145,7 +145,7 @@ public class LoginActivity extends BaseActivity {
 			}
 			
 			
-
+			// 该ice只作为客户端出现，连接ice服务器，服务器是用C++写的
 			appContext.m_ice.login(appContext.getCookie("cent_ip"), AppContext.CENT_PORT);
 			
 			

@@ -2031,7 +2031,7 @@ containing a value of this type.
         public static final int ImageView01=0x7f0b009d;
         public static final int ImageView02=0x7f0b00a7;
         public static final int ImageView03=0x7f0b00a9;
-        public static final int ImageView04=0x7f0b00a0;
+        public static final int ImageView04=0x7f0b009f;
         public static final int ImageView05=0x7f0b00ad;
         public static final int ImageView06=0x7f0b00a5;
         public static final int ImageView07=0x7f0b00a3;
@@ -2195,7 +2195,7 @@ containing a value of this type.
         public static final int st_auto_login=0x7f0b00a8;
         public static final int st_enable_2g3g=0x7f0b00a6;
         public static final int st_enable_message=0x7f0b00a4;
-        public static final int st_enable_message_night=0x7f0b009f;
+        public static final int st_enable_message_night=0x7f0b00a0;
         public static final int st_enable_message_v=0x7f0b00a2;
         public static final int submit_area=0x7f0b0045;
         public static final int t_view_pic=0x7f0b00b1;

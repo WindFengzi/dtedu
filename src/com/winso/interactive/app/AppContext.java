@@ -1,24 +1,23 @@
 package com.winso.interactive.app;
 
-import android.location.LocationManager;
 import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
 
-import com.winso.interactive.PointActivity;
-import com.winso.interactive.app.AppConfig;
-import com.winso.comm_library.*;
-
+import com.winso.comm_library.AssetsDatabaseManager;
+import com.winso.comm_library.StringUtils;
+import com.winso.comm_library.TimeZoneUtil;
+import com.winso.comm_library.TinyDB;
 import com.winso.comm_library.icedb.ICEDBUtil;
 import com.winso.comm_library.icedb.SelectHelp;
 import com.winso.comm_library.icedb.SelectHelpParam;
 
 import android.app.Application;
 import android.content.Context;
-import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager.NameNotFoundException;
+import android.location.LocationManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Environment;

@@ -19,7 +19,7 @@
     <string name="s_header_title">标题</string>
     <string name="s_about">关于</string>
     <string name="s_save">保存</string>
-    <string name="cent_ip">IP:</string>
+    <string name="cent_ip">IP  :</string>
     <string name="s_enable_2g_3g">2G/3G模式上传下载</string>
     <string name="s_enable_message">消息提示</string>
     <string name="s_enable_message_v">消息振动提示</string>

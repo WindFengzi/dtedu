@@ -1,11 +1,8 @@
 package com.winso.interactive;
 
-import com.winso.interactive.BaseListRefreshViewActivity.GetDataTask;
 import com.winso.interactive.app.ActionSelectAdapter;
-import com.winso.interactive.app.AppContext;
 import com.winso.interactive.app.UIHelper;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
