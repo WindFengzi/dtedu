@@ -738,7 +738,7 @@ public class AnswerActivity extends BaseViewSaveActivity {
 			// setEditText(R.id.ed_answer_text, sContent);
 
 			// sDrawInfo
-
+			System.out.println("sDrawInfo--->" + sDrawInfo);
 			return;
 		}
 	}

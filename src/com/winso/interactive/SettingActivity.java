@@ -50,20 +50,12 @@ public class SettingActivity extends BaseActivity {
 		mStMessageV = (SwitchButton) findViewById(R.id.st_enable_message_v);
 		mStMessageNight = (SwitchButton) findViewById(R.id.st_enable_message_night);
 		mEdCentIP = (EditText) findViewById(R.id.ed_cent_ip);
-//		mBtSave = (Button) findViewById(R.id.btn_save);
-//		mBtSave.setOnClickListener(new OnClickListener() {
-//			@Override
-//			public void onClick(View v) {
-//				save();
-//			}
-//		});
+
 		appContext = (AppContext) getApplication();
 		
 		
 		fbSave = (Button) findViewById(R.id.btn_save);
 		getRightChangeBtn(RIGHT_SAVE);
-//		tvRight = (TextView) findViewById(R.id.text_right);
-//		getRightText(RIGHT_SAVE);
 		fbSave.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -75,10 +67,6 @@ public class SettingActivity extends BaseActivity {
 		mBtBack.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				
-				
-				
-				
 				finish();
 			}
 		});

@@ -235,4 +235,13 @@ public abstract class BaseViewSaveActivity extends BaseActivity {
 		return true;
 	}
 	
+	/**
+	 * 将R.string.xxx整型转换成字符串
+	 * @author Hman
+	 * @date 2016/8/16
+	 * */
+	@SuppressWarnings("unused")
+	public String intToString(int strId) {
+		return getResources().getString(strId);
+	}
 }

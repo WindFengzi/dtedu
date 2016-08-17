@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:background="#eee"
-        android:orientation="vertical" >
-           <include
-        android:id="@+id/include_toolbar"
-        layout="@layout/activity_main_header" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="#eee"
+	android:orientation="vertical" >
+        <include
+        	android:id="@+id/include_toolbar"
+        	layout="@layout/activity_main_header" />
         
            
 		<ScrollView 
     		android:layout_width="fill_parent"
     		android:layout_height="fill_parent"
-    		android:scrollbarStyle="outsideOverlay" 
-    		 >
+    		android:scrollbarStyle="outsideOverlay">
 
         	<LinearLayout
         	    android:layout_width="fill_parent"
@@ -33,7 +32,7 @@
         	            android:layout_width="wrap_content"
         	            android:layout_height="wrap_content"
         	            android:padding="8dp"
-        	            android:text="选择老师"
+        	            android:text="@string/title_activity_select_teacher"
         	            android:textColor="#000"
         	            android:textSize="@dimen/text_size_16" />
 
@@ -70,9 +69,9 @@
         	            android:layout_width="wrap_content"
         	            android:layout_height="wrap_content"
         	            android:padding="8dp"
-        	            android:text="开始时间"
+        	            android:text="@string/begin_time"
         	            android:textColor="#000"
-        	            android:textSize="17sp" />
+        	            android:textSize="@dimen/text_size_16" />
 
         	        <Button
         	            android:id="@+id/bt_select_from_time"
@@ -104,7 +103,7 @@
         	            android:layout_width="wrap_content"
         	            android:layout_height="wrap_content"
         	            android:padding="8dp"
-        	            android:text="结束时间"
+        	            android:text="@string/end_time"
         	            android:textColor="#000"
         	            android:textSize="@dimen/text_size_16" />
 
@@ -140,7 +139,7 @@
         	            android:layout_width="wrap_content"
         	            android:layout_height="wrap_content"
         	            android:padding="8dp"
-        	            android:text="请假内容"
+        	            android:text="@string/leave_content"
         	            android:textColor="#000"
         	            android:textSize="@dimen/text_size_16" />
         	    </RelativeLayout>
@@ -160,7 +159,7 @@
         	            android:layout_alignParentLeft="true"
         	            android:layout_alignParentRight="true"
         	            android:gravity="left"
-        	            android:hint="请输入具体的请假事由"
+        	            android:hint="@string/input_leave_content"
         	            android:minHeight="120dp"
         	            android:padding="8dp"
         	            android:textColor="#000"
@@ -168,12 +167,7 @@
 
         	    </RelativeLayout>
 
-        	    <!-- *********************************************************************** -->
-
-
-        	    <!-- *********************************************************************** -->
-        	    <!-- ******************************************************************** -->
-
+        
         	</LinearLayout>
 
     </ScrollView>

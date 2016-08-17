@@ -5,11 +5,8 @@ import java.util.Vector;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
-import android.graphics.LinearGradient;
 import android.graphics.Paint;
 import android.graphics.PointF;
-import android.graphics.RectF;
-import android.graphics.Shader;
 import android.view.MotionEvent;
 import android.view.View;
 
@@ -28,17 +25,14 @@ public class DrawView extends View {
 	Paint m_paint = new Paint();  
     public DrawView(Context context) {  
         super(context);  
-        
-        //addPoint(10,20);
-        
-        
+        //addPoint(10,20);        
         m_paint.setStyle(Paint.Style.STROKE);//设置填满  
         m_paint.setAntiAlias(true);
         
         m_paint.setColor(Color.RED);// 设置红色  
        // addPoint(103,220);
     }  
-  
+ 
     public String getDraw()
     {
     	String sInfo = new String("");
@@ -53,6 +47,7 @@ public class DrawView extends View {
     	 
     	 return sInfo;
     }
+    
     public void addPoint(float x,float y)
     {
     	if ( fScaleWidth<= 0 )
@@ -61,12 +56,12 @@ public class DrawView extends View {
     	if ( fScaleHeight<= 0 )
     		fScaleHeight = 1;
     	
-    	
     	PointF pt = new PointF(x*100/fScaleWidth,y*100/fScaleHeight);
  
     	m_vPoints.add(pt);
     	
     }
+    
     public void addPointOut(float x,float y)
     {
     	
@@ -75,6 +70,7 @@ public class DrawView extends View {
     	m_vPoints.add(pt);
     	
     }
+    
 	@Override
 	public boolean onTouchEvent(MotionEvent event) {
 		
@@ -108,11 +104,13 @@ public class DrawView extends View {
 
 	        return true;
 	 }
+	
     public void removeAll()
     {
     	m_vPoints.removeAllElements();
     	
     }
+    
     @Override  
     protected void onDraw(Canvas canvas) {  
         super.onDraw(canvas);  
@@ -124,8 +122,6 @@ public class DrawView extends View {
         
        // canvas.setDrawFilter(new PaintFlagsDrawFilte(0, Paint.ANTI_ALIAS_FLAG|Paint.FILTER_BITMAP_FLAG));
         
-
-  
         //p.setAntiAlias(true);// 设置画笔的锯齿效果。 true是去除，大家一看效果就明白了  
         
         

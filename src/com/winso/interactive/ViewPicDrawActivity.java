@@ -1,7 +1,7 @@
 package com.winso.interactive;
 
 import com.winso.comm_library.app.TNAppContext;
-import com.winso.interactive.R;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -33,6 +33,7 @@ public class ViewPicDrawActivity extends BaseActivity {
 	
 	String sInDrawInfo = new String("");
 
+	@SuppressWarnings("deprecation")
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -47,6 +48,8 @@ public class ViewPicDrawActivity extends BaseActivity {
 
 		
 		fScreenWidth = this.getWindowManager().getDefaultDisplay().getWidth();
+//		Point outSize = new Point();
+//		this.getWindowManager().getDefaultDisplay().getSize(outSize);
 		fScreenHeight = this.getWindowManager().getDefaultDisplay().getHeight();
 		 
 		//tViewImage.setMinZoom(1);
@@ -71,10 +74,10 @@ public class ViewPicDrawActivity extends BaseActivity {
 			scaleHeight=((float)fBmpHeight)/fScreenHeight;			
 		}
 		
-	    Matrix matrix=new Matrix();  
+	    Matrix matrix = new Matrix();  
         matrix.postScale(1/scaleWidth,1/scaleHeight);
 
-        Bitmap newBitmap=Bitmap.createBitmap(bmpDefaultPic, 0, 0, (int)fBmpWidth,(int)fBmpHeight, matrix, true);  
+        Bitmap newBitmap = Bitmap.createBitmap(bmpDefaultPic, 0, 0, (int)fBmpWidth,(int)fBmpHeight, matrix, true);  
         tViewImage.setImageBitmap(newBitmap);  
         
 		// 设置返回按扭
@@ -126,18 +129,13 @@ public class ViewPicDrawActivity extends BaseActivity {
 		// 通知view组件重绘
 		
 		//设置点
-		//sInDrawInfo
-	
-		//
+
 		String[] vsAllPoints = sInDrawInfo.split(";", -1);
 		for(int i=0;i<vsAllPoints.length;i++)
 		{
 			String[] vsSub = vsAllPoints[i].split(",", -1);
-			
 			if ( vsSub.length < 2 ) continue;
-			
 			mDrawView.addPointOut(Float.parseFloat(vsSub[0]), Float.parseFloat(vsSub[1]));
-			
 		}
 		
 		

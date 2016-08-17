@@ -79,15 +79,15 @@ public class BaseActivity extends Activity {
 	public void getRightChangeBtn(String str) {
 		Drawable drawable;
 		
-		if (str.equals(RIGHT_SUBMIT)) {
+		if (str.equals(RIGHT_SUBMIT)) { // 提交
 			drawable = getResources().getDrawable(R.drawable.btn_true);
 			drawable.setBounds(0, 0, drawable.getMinimumWidth(), drawable.getMinimumHeight()); //设置边界
 			fbSave.setCompoundDrawables(null, null, drawable, null);
-		} else if (str.equals(RIGHT_ADD)) {
+		} else if (str.equals(RIGHT_ADD)) { // 添加
 			drawable = getResources().getDrawable(R.drawable.btn_add);
 			drawable.setBounds(0, 0, drawable.getMinimumWidth(), drawable.getMinimumHeight()); //设置边界
 			fbSave.setCompoundDrawables(null, null, drawable, null);
-		} else if (str.equals(RIGHT_SAVE)) {
+		} else if (str.equals(RIGHT_SAVE)) { // 提交保存
 			drawable = getResources().getDrawable(R.drawable.btn_true);
 			drawable.setBounds(0, 0, drawable.getMinimumWidth(), drawable.getMinimumHeight()); //设置边界
 			fbSave.setCompoundDrawables(null, null, drawable, null);

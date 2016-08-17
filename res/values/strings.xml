@@ -55,5 +55,17 @@
     <string name="input_hint_after">你已经签过到了！</string>
     <string name="about">关于</string>
     <string name="loginOut">退出</string>
+    
+    <string name="change_begin_time">请选择开始时间</string>
+	<string name="change_end_time">请选择结束时间</string>
+	<string name="choose_teacher">请选择请假教师</string>
+	<string name="input_reason">请输入请假原因</string>
+	<string name="begin_diff_end">输入的开始与结束时间不能一样</string>
+	<string name="begin_small_end">输入的开始时间必须小于结束时间</string>
+	<string name="begin_time">开始时间</string>
+	<string name="end_time">结束时间</string>
+	<string name="leave_content">请假内容</string>
+	<string name="input_leave_content">请输入具体的请假事由</string>
+	<string name="leave_history">请假历史</string>
 	
 </resources>

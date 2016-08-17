@@ -4,6 +4,7 @@ import com.winso.comm_library.DateTimePickDialogUtil;
 import com.winso.interactive.app.UIHelper;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -26,35 +27,19 @@ public class LeaveActivity extends BaseViewSaveActivity {
 		setContentView(R.layout.activity_leave);
 
 		TextView vTitle = (TextView) findViewById(R.id.tx_header_title);
-		vTitle.setText("请假");
+		vTitle.setText(R.string.s_leave); // 请假
+//		vTitle.setText(intToString(R.string.change_end_time));
 
 		// 点击添加请假
 		fbSave = (Button) findViewById(R.id.btn_save);
-//		// fbSave = (Button) findViewById(R.id.btn_save);
-//		// fbSave.setVisibility(View.INVISIBLE);
 		getRightChangeBtn(RIGHT_SUBMIT);
 		fbSave.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				
-				
 				startSaveThread();
-				
-				
-
 			}
 		});
-		// 点击添加请假
-//		tvRight = (TextView) findViewById(R.id.text_right);
-//		getRightText(RIGHT_SUBMIT);
-//		tvRight.setOnClickListener(new OnClickListener(){
-//
-//			@Override
-//			public void onClick(View v) {
-//				// TODO Auto-generated method stub
-//				startSaveThread();
-//			}
-//		});
+
 		// 设置返回按扭
 		Button mBtBack = (Button) findViewById(R.id.btn_back);
 		mBtBack.setOnClickListener(new OnClickListener() {
@@ -143,36 +128,36 @@ public class LeaveActivity extends BaseViewSaveActivity {
 	private int ProcessSave() {
 		String sFromDate = btSelectFromDate.getText().toString();
 		if (sFromDate.length() <= 0) {
-			UIHelper.showMsg(this, "", "请选择开始时间");
+			UIHelper.showMsg(this, "", (String)getText(R.string.change_begin_time)); // 请选择开始时间
 			return -9;
 		}
 
 		String sToDate = btSelectToDate.getText().toString();
 		if (sToDate.length() <= 0) {
-			UIHelper.showMsg(this, "", "请选择结束时间");
+			UIHelper.showMsg(this, "", intToString(R.string.change_end_time)); // 请选择结束时间
 			return -9;
 		}
 
 		// String sTeacherID = getButtonText(R.id.bt_select_teacher);
 		if (sTeacherID.length() <= 0) {
-			UIHelper.showMsg(this, "", "请选择请假教师");
+			UIHelper.showMsg(this, "", intToString(R.string.choose_teacher)); // 请选择请假教师
 			return -9;
 		}
 
 		String sContext = getEditText(R.id.ed_ev_context);
 		if (sContext.length() <= 0) {
-			UIHelper.showMsg(this, "", "请输入请假原因");
+			UIHelper.showMsg(this, "", intToString(R.string.input_reason)); // 请输入请假原因
 			return -9;
 		}
 		
 		//判断时间是不能一样的
 		
 		if (sFromDate.equals(sToDate) ) {
-			UIHelper.showMsg(this, "", "输入的开始与结束时间不能一样");
+			UIHelper.showMsg(this, "", intToString(R.string.begin_diff_end)); // 输入的开始与结束时间不能一样
 			return -9;
 		}
 		if (sFromDate.compareTo(sToDate) > 0  ) {
-			UIHelper.showMsg(this, "", "输入的开始时间必须小于结束时间");
+			UIHelper.showMsg(this, "", intToString(R.string.begin_small_end)); // 输入的开始时间必须小于结束时间
 			return -9;
 		}
 		

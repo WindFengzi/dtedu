@@ -2,6 +2,7 @@ package com.winso.interactive;
 
 import com.winso.comm_library.icedb.SelectHelp;
 import com.winso.interactive.R;
+import com.winso.interactive.app.AppContext;
 import com.winso.interactive.app.UIHelper;
 
 import android.content.Intent;
@@ -47,6 +48,7 @@ public class LeaveViewActivity extends BaseViewSaveActivity {
 			ed.setKeyListener(null);
 		}
 		startLoadDataThread();
+		AppContext.getInstance().addActivity(this);
 	}
 
 	@Override

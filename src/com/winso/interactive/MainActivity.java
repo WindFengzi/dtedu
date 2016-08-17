@@ -2,6 +2,8 @@ package com.winso.interactive;
 
 import java.io.File;
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import com.kbeanie.imagechooser.api.ChooserType;
 import com.winso.comm_library.CallbackInterface;
@@ -38,9 +40,11 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends BaseActivity {
 
@@ -136,6 +140,7 @@ public class MainActivity extends BaseActivity {
 
 		// onClickLock();
 		// showNotification();
+		AppContext.getInstance().addActivity(this);
 	}
 
 	public static boolean isApplicationBroughtToBackground(final Context context) {
@@ -581,4 +586,42 @@ public class MainActivity extends BaseActivity {
 
 	}
 
+	/**
+	 * 双击突出查询
+	 * @author Hman
+	 * @date 2016/8/12
+	 * */
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		if (keyCode == KeyEvent.KEYCODE_BACK) {
+			exitBy2Click();
+		}
+		
+		return false;
+	}
+	
+	private static boolean isExit = false;
+
+	private void exitBy2Click() {
+		Timer tExit = null;
+		if (isExit == false) {
+			isExit = true; // 准备退出
+			Toast.makeText(this, "再按一次退出程序", Toast.LENGTH_SHORT).show();
+			tExit = new Timer();
+			tExit.schedule(new TimerTask(){
+
+				@Override
+				public void run() {
+					isExit = false; // 取消退出					
+				}				
+			}, 800);
+			
+		} else {
+			finish();
+//			System.exit(0);
+			AppContext.getInstance().exit();;
+		}
+		
+	}
+	
 }

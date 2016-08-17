@@ -1,7 +1,9 @@
 package com.winso.interactive.app;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Properties;
 
@@ -13,6 +15,7 @@ import com.winso.comm_library.icedb.ICEDBUtil;
 import com.winso.comm_library.icedb.SelectHelp;
 import com.winso.comm_library.icedb.SelectHelpParam;
 
+import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
 import android.content.pm.PackageInfo;
@@ -812,4 +815,30 @@ public class AppContext extends Application {
 				helpParam.get());
 	}
 	
+	/**
+	 * 添加Activity,退出Activity，和单例模式
+	 * @author Hman
+	 * @date 2016/8/15
+	 * */
+	private List<Activity> actList;
+	
+	public void addActivity(Activity activity) {
+		if (null == actList) {
+			actList = new ArrayList<Activity>();
+		}
+		actList.add(activity);
+	}
+
+	public void exit() {
+		for (Activity activity : actList) {
+			activity.finish();
+		}
+	}
+	private static AppContext appContext;
+	public static AppContext getInstance() {
+		if (appContext == null) {
+			appContext = new AppContext();
+		}
+		return appContext;
+	}
 }

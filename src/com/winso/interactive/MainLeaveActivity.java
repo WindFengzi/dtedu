@@ -18,7 +18,7 @@ public class MainLeaveActivity extends BaseListRefreshViewActivity {
 		setContentView(R.layout.activity_leave_main_list);
 
 		TextView vTitle = (TextView) findViewById(R.id.tx_header_title);
-		vTitle.setText("请假历史");
+		vTitle.setText("请假历史"); // 请假历史
 
 		// 添加新请假按钮
 		fbSave = (Button) findViewById(R.id.btn_save);
